@@ -45,11 +45,8 @@
 
     section {
       padding: 50px 20px;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
-      background-color: rgba(255, 255, 255, 0.95);
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
     h2 {
@@ -59,14 +56,33 @@
       color: #003366;
     }
 
-    details {
-      background-color: #ffffff;
-      border-left: 5px solid #007bff;
-      border-radius: 8px;
+    .product-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .category {
+      flex: 1 1 300px;
+      border-radius: 10px;
       padding: 20px;
-      margin-bottom: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      color: #444;
+    }
+
+    .electrical {
+      background-color: #e0f2ff;
+      border-left: 5px solid #007bff;
+    }
+
+    .electronic {
+      background-color: #e0ffe0;
+      border-left: 5px solid #28a745;
+    }
+
+    .plumbing {
+      background-color: #fff3e0;
+      border-left: 5px solid #ff9800;
     }
 
     summary {
@@ -85,95 +101,6 @@
       color: white;
       border-radius: 10px;
       padding: 30px;
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .contact a {
-      color: #ffc107;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #001f3f;
-      color: #ccc;
-    }
-
-    @media (max-width: 600px) {
-      .brand-box {
-        font-size: 2rem;
-        padding: 10px 20px;
-      }
-
-      .tagline-pill {
-        font-size: 1rem;
-        padding: 12px 20px;
-        margin: 20px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="brand-box">BRANDS VALUE!</div>
-    <div class="tagline-pill">
-      Your trusted source for Electrical, Electronics & Plumbing products
-    </div>
-  </header>
-
-  <section>
-    <h2>Our Product Categories</h2>
-
-    <details>
-      <summary>Electrical Items</summary>
-      <ul>
-        <li>Switches</li>
-        <li>Wires & Cables</li>
-        <li>MCBs & DB Panels</li>
-        <li>LED Lights & Fixtures</li>
-        <li>Extension Boards</li>
-      </ul>
-    </details>
-
-    <details>
-      <summary>Electronic Devices</summary>
-      <ul>
-        <li>Multimeters</li>
-        <li>Soldering Irons</li>
-        <li>Testing Equipment</li>
-        <li>Power Supplies</li>
-        <li>Rechargeable Batteries</li>
-      </ul>
-    </details>
-
-    <details>
-      <summary>Plumbing Essentials</summary>
-      <ul>
-        <li>PVC Pipes & Elbows</li>
-        <li>Water Taps</li>
-        <li>Shower Heads</li>
-        <li>Faucet Fittings</li>
-        <li>Sanitary Products</li>
-      </ul>
-    </details>
-  </section>
-
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>📞 Phone: <a href="tel:9205533262">9205533262</a></p>
-    <p>📧 Email: <a href="mailto:ratishkarn103@gmail.com">ratishkarn103@gmail.com</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Brands Value. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
 
 
   
