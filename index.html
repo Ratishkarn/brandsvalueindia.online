@@ -1,18 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="BrandsValueIndia - Your trusted Electrical & Electronics Store" />
-    <meta name="keywords" content="Electronics, Electrical, Online Store, India" />
-    <meta name="author" content="BrandsValueIndia" />
-    <meta name="google-site-verification" content="h-_1BBWUBk4WQCp0APaKxaUGNMZSmycRkhU375WzzTA" />
-    <title>BrandsValueIndia | Electrical & Electronics Store</title>
-    <link rel="canonical" href="https://brandsvalueindia.online/" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BrandsValueIndia - Your Trusted Brand</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+        header {
+            background: #0073e6;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            color: white;
+            background-color: #0073e6;
+            padding: 5px 15px;
+            border-radius: 5px;
+            margin: 0;
+            font-weight: bold;
+        }
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px #000;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background: white;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #0073e6;
+            margin-bottom: 15px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .products {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .product-card {
+            background: #e7f0ff;
+            padding: 15px;
+            margin: 10px;
+            flex: 1 1 30%;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .products {
+                flex-direction: column;
+            }
+            .product-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to BrandsValueIndia</h1>
-    <p>Your trusted Electrical & Electronics Store.</p>
+    <header>
+        <h1>Brands Value!</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Products</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        Your Trusted Brand with Quality Products
+    </div>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At BrandsValueIndia, we provide high-quality products and services. Our goal is to offer reliable and the best options for our customers.</p>
+        </section>
+
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="products">
+                <div class="product-card">
+                    <h3>Product 1</h3>
+                    <p>This product is available at high quality and affordable price.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Product 2</h3>
+                    <p>Our second product is perfect for your daily needs.</p>
+                </div>
+                <div class="product-card">
+                    <h3>Product 3</h3>
+                    <p>With special features, this product is a better choice for you.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>You can reach us at the following phone number or email:</p>
+            <p>Phone: +91-9205533262</p>
+            <p>Email: <a href="mailto:ratishkarn103@gmail.com">ratishkarn103@gmail.com</a></p>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2025 BrandsValueIndia. All rights reserved.
+    </footer>
 </body>
 </html>
 
