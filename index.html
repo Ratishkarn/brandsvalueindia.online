@@ -42,38 +42,66 @@
   }
 
   .categories {
-    margin: 40px auto;
     max-width: 900px;
+    margin: 40px auto;
     display: flex;
+    gap: 20px;
     justify-content: center;
-    gap: 25px;
+    flex-wrap: wrap;
   }
 
-  .category {
-    flex: 1;
-    background: #e3f2fd;
-    padding: 18px 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 8px rgba(30, 144, 255, 0.2);
+  .category-card {
+    background: white;
+    flex: 1 1 280px;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(30, 144, 255, 0.15);
     color: #1e90ff;
-    font-weight: 700;
-    font-size: 1.15rem;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
     user-select: none;
   }
 
-  .category:hover {
+  .category-card h3 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #1e90ff;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+  }
+
+  .product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .product-list li {
+    background: #dbe9fb;
+    color: #125dca;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: default;
+  }
+
+  .product-list li:nth-child(odd) {
     background: #bbdefb;
-    color: #0d47a1;
+  }
+
+  .product-list li:hover {
+    background-color: #90caf9;
   }
 
   @media (max-width: 700px) {
     .categories {
       flex-direction: column;
-      gap: 20px;
       max-width: 90%;
+    }
+
+    .category-card {
+      flex: 1 1 auto;
     }
   }
 </style>
@@ -88,12 +116,44 @@
 </header>
 
 <section class="categories">
-  <div class="category">Electrical Items</div>
-  <div class="category">Plumbing Essentials</div>
-  <div class="category">Hardware Supplies</div>
+  
+  <div class="category-card">
+    <h3>Electrical Items</h3>
+    <ul class="product-list">
+      <li>Switches</li>
+      <li>Wires</li>
+      <li>MCBs</li>
+      <li>Panels</li>
+      <li>Lighting Solutions</li>
+    </ul>
+  </div>
+  
+  <div class="category-card">
+    <h3>Plumbing Essentials</h3>
+    <ul class="product-list">
+      <li>Pipes</li>
+      <li>Taps</li>
+      <li>Elbows</li>
+      <li>Shower Fittings</li>
+      <li>Sanitary Items</li>
+    </ul>
+  </div>
+  
+  <div class="category-card">
+    <h3>Hardware Supplies</h3>
+    <ul class="product-list">
+      <li>Hammers</li>
+      <li>Screwdrivers</li>
+      <li>Wrenches</li>
+      <li>Nails & Screws</li>
+      <li>Drills</li>
+    </ul>
+  </div>
+
 </section>
 
 </body>
 </html>
+
 
 
