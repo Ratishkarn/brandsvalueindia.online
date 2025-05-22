@@ -5,11 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brands Value</title>
   <style>
-    /* Reset margin/padding */
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,8 +15,6 @@
       min-height: 100vh;
       position: relative;
     }
-
-    /* Dark overlay for better contrast */
     body::before {
       content: "";
       position: fixed;
@@ -28,7 +22,6 @@
       background: rgba(15, 32, 64, 0.75);
       z-index: -1;
     }
-
     header {
       padding: 70px 20px 60px;
       text-align: center;
@@ -37,7 +30,6 @@
       z-index: 1;
       text-shadow: 0 2px 8px rgba(0,0,0,0.7);
     }
-
     .brand-box {
       display: inline-block;
       background-color: #1e90ff;
@@ -48,16 +40,7 @@
       border-radius: 15px;
       box-shadow: 0 5px 15px rgba(30, 144, 255, 0.6);
       letter-spacing: 2px;
-      user-select: none;
-      transition: background-color 0.3s ease;
-      cursor: default;
     }
-
-    .brand-box:hover {
-      background-color: #0073e6;
-      box-shadow: 0 7px 20px rgba(0, 115, 230, 0.8);
-    }
-
     header p {
       margin-top: 20px;
       font-size: 1.3rem;
@@ -68,8 +51,11 @@
       margin-right: auto;
       color: #dbe9fb;
       text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+      background-color: #fff3cd;
+      padding: 12px 25px;
+      border-radius: 25px;
+      display: inline-block;
     }
-
     section {
       max-width: 1000px;
       margin: 40px auto 60px;
@@ -80,61 +66,42 @@
       color: #2c3e50;
       position: relative;
       z-index: 1;
-      transition: box-shadow 0.3s ease;
     }
-
-    section:hover {
-      box-shadow: 0 15px 35px rgba(0,0,0,0.18);
-    }
-
     h2 {
       text-align: center;
       font-size: 2rem;
       margin-bottom: 35px;
       color: #1a3c6e;
-      letter-spacing: 0.05em;
       font-weight: 700;
       text-transform: uppercase;
     }
-
     .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
-
     .product {
-      background-color: #f8faff;
-      border-left: 6px solid #1e90ff;
+      padding: 20px;
       border-radius: 12px;
-      padding: 28px 25px;
       box-shadow: 0 4px 12px rgba(30, 144, 255, 0.12);
       color: #34495e;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: default;
-      user-select: none;
     }
-
-    .product:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 20px rgba(30, 144, 255, 0.3);
-    }
-
+    .electrical { background-color: #e6f0ff; border-left: 6px solid #1e90ff; }
+    .hardware { background-color: #e9fbe9; border-left: 6px solid #28a745; }
+    .plumbing { background-color: #fff0ea; border-left: 6px solid #ff5733; }
     .product h3 {
       margin-top: 0;
-      color: #125dca;
       font-size: 1.5rem;
       font-weight: 700;
-      letter-spacing: 0.03em;
+      color: #125dca;
     }
-
-    .product p {
-      margin-top: 12px;
-      font-size: 1rem;
-      line-height: 1.5;
-      color: #566573;
+    .product ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
     }
-
+    .product li {
+      margin-bottom: 8px;
+    }
     .contact {
       max-width: 600px;
       background-color: #125dca;
@@ -144,104 +111,66 @@
       text-align: center;
       margin: 40px auto 70px;
       box-shadow: 0 10px 30px rgba(18, 93, 202, 0.5);
-      position: relative;
-      z-index: 1;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      user-select: none;
     }
-
     .contact a {
       color: #ffd54f;
       font-weight: 700;
       text-decoration: none;
-      transition: color 0.3s ease;
     }
-
     .contact a:hover {
       color: #ffecb3;
       text-decoration: underline;
     }
-
     footer {
       text-align: center;
       padding: 20px 15px;
       background-color: #0d214a;
       color: #a9b4c7;
-      font-size: 0.95rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      user-select: none;
-      position: relative;
-      z-index: 1;
     }
-
-    .note {
-      text-align: center;
-      font-size: 0.85rem;
-      color: #9bb7d4;
-      margin: 10px 0 40px;
-      user-select: none;
-      position: relative;
-      z-index: 1;
-    }
-
-    .note a {
-      color: #ffd54f;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    .note a:hover {
-      text-decoration: underline;
-      color: #fff176;
-    }
-
     @media (max-width: 600px) {
-      .brand-box {
-        font-size: 2.2rem;
-        padding: 12px 28px;
-      }
-
-      section {
-        margin: 30px 15px 50px;
-        padding: 30px 20px;
-      }
-
-      .products {
-        grid-template-columns: 1fr;
-        gap: 22px;
-      }
-
-      .contact {
-        padding: 30px 20px;
-        margin: 30px 15px 50px;
-      }
+      .products { gap: 22px; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="brand-box">Brand Value!</div>
-    <p>Your trusted source for Electrical, Electronics & Plumbing products</p>
+    <div class="brand-box">BRANDS VALUE!</div>
+    <p>Your trusted source for Electrical, Hardware & Plumbing products</p>
   </header>
 
   <section>
     <h2>Our Product Categories</h2>
     <div class="products">
-      <div class="product">
+      <div class="product electrical">
         <h3>Electrical Items</h3>
-        <p>Switches, wires, MCBs, panels, and lighting solutions.</p>
+        <ul>
+          <li>Switches</li>
+          <li>Wires</li>
+          <li>MCBs</li>
+          <li>Panels</li>
+          <li>Lighting Solutions</li>
+        </ul>
       </div>
-      <div class="product">
-        <h3>Electronic Devices</h3>
-        <p>Multimeters, testing tools, soldering kits, batteries, and more.</p>
+      <div class="product hardware">
+        <h3>Hardware Devices</h3>
+        <ul>
+          <li>Multimeters</li>
+          <li>Testing Tools</li>
+          <li>Soldering Kits</li>
+          <li>Batteries</li>
+          <li>Power Tools</li>
+        </ul>
       </div>
-      <div class="product">
+      <div class="product plumbing">
         <h3>Plumbing Essentials</h3>
-        <p>Pipes, taps, elbows, shower fittings, and sanitary items.</p>
+        <ul>
+          <li>Pipes</li>
+          <li>Taps</li>
+          <li>Elbows</li>
+          <li>Shower Fittings</li>
+          <li>Sanitary Items</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -256,11 +185,8 @@
     <p>&copy; 2025 Brands Value. All rights reserved.</p>
   </footer>
 
-  <div class="note">
-    ELECTRICAL ELECTRONICS & PLUMBING HARDWARE STORE — 
-    <a href="https://www.freepik.com/premium-photo/high-voltage-power-lines-sunset_7282767.htm#fromView=keyword&page=1&position=28&uuid=a5fec78c-27fa-4c9a-bea7-d91b28dfd4dc&query
-
-
+</body>
+</html>
 
   
 
