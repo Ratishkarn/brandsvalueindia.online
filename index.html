@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Brands Value</title>
   <style>
+    /* Reset */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -12,80 +13,110 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fc;
       color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px 40px;
     }
 
     header {
+      margin-bottom: 40px;
       text-align: center;
-      padding: 60px 20px 20px;
     }
 
     .brand-title {
-      font-size: 3rem;
-      font-weight: bold;
+      font-size: 3.2rem;
+      font-weight: 900;
       color: white;
       background-color: #1e90ff;
-      padding: 15px 40px;
-      border-radius: 12px;
+      padding: 20px 60px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(30, 144, 255, 0.7);
+      user-select: none;
       display: inline-block;
-      box-shadow: 0 5px 15px rgba(30, 144, 255, 0.5);
+      letter-spacing: 2px;
     }
 
-    .tagline {
-      margin-top: 20px;
-      background-color: #ffeb3b;
-      color: #222;
-      font-weight: 600;
-      padding: 10px 25px;
-      border-radius: 20px;
-      font-size: 1.2rem;
-      display: inline-block;
-    }
-
-    .categories {
+    .categories-container {
       display: flex;
+      gap: 30px;
       justify-content: center;
-      gap: 25px;
-      padding: 50px 20px;
-      flex-wrap: wrap;
+      width: 100%;
+      max-width: 1100px;
     }
 
-    .category-box {
-      width: 300px;
-      border-radius: 12px;
-      padding: 25px 20px;
-      color: #fff;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    .category-card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      padding: 30px 25px;
+      flex: 1;
+      min-width: 260px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+      user-select: none;
     }
 
-    .category-box h2 {
-      margin-bottom: 12px;
-      font-size: 1.6rem;
+    .category-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 144, 255, 0.3);
+    }
+
+    .category-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
       text-align: center;
+      color: white;
+      padding: 12px 0;
+      border-radius: 10px;
+      user-select: none;
     }
 
-    .category-box ul {
+    .electrical {
+      background-color: #007bff;
+      box-shadow: 0 0 10px #007bffaa;
+    }
+
+    .plumbing {
+      background-color: #28a745;
+      box-shadow: 0 0 10px #28a745aa;
+    }
+
+    .hardware {
+      background-color: #ff9800;
+      box-shadow: 0 0 10px #ff9800aa;
+    }
+
+    .product-list {
       list-style-type: disc;
-      padding-left: 25px;
-    }
-
-    .category-box ul li {
-      margin-bottom: 8px;
+      padding-left: 20px;
+      color: #444;
       font-size: 1rem;
+      line-height: 1.5;
+      user-select: none;
     }
-
-    .electrical { background-color: #007bff; }
-    .plumbing { background-color: #28a745; }
-    .hardware  { background-color: #ff9800; }
 
     footer {
+      margin-top: 60px;
       text-align: center;
-      padding: 20px;
-      background-color: #003366;
-      color: white;
-      margin-top: 50px;
+      color: #666;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .categories-container {
+        flex-direction: column;
+        max-width: 90%;
+      }
+
+      .category-card {
+        min-width: auto;
+      }
     }
   </style>
 </head>
@@ -93,13 +124,13 @@
 
   <header>
     <div class="brand-title">BRANDS VALUE!</div>
-    <div class="tagline">Your trusted source for Electrical, Plumbing & Hardware products</div>
   </header>
 
-  <div class="categories">
-    <div class="category-box electrical">
-      <h2>Electrical</h2>
-      <ul>
+  <section class="categories-container">
+
+    <div class="category-card electrical">
+      <h2 class="category-title">Electrical</h2>
+      <ul class="product-list">
         <li>Switches</li>
         <li>Wires</li>
         <li>MCBs</li>
@@ -108,9 +139,9 @@
       </ul>
     </div>
 
-    <div class="category-box plumbing">
-      <h2>Plumbing</h2>
-      <ul>
+    <div class="category-card plumbing">
+      <h2 class="category-title">Plumbing</h2>
+      <ul class="product-list">
         <li>Pipes</li>
         <li>Taps</li>
         <li>Elbows</li>
@@ -119,9 +150,9 @@
       </ul>
     </div>
 
-    <div class="category-box hardware">
-      <h2>Hardware</h2>
-      <ul>
+    <div class="category-card hardware">
+      <h2 class="category-title">Hardware</h2>
+      <ul class="product-list">
         <li>Drill Machines</li>
         <li>Screwdrivers</li>
         <li>Spanners</li>
@@ -129,7 +160,8 @@
         <li>Measuring Tools</li>
       </ul>
     </div>
-  </div>
+
+  </section>
 
   <footer>
     &copy; 2025 Brands Value. All rights reserved.
@@ -137,6 +169,7 @@
 
 </body>
 </html>
+
 
   
 
