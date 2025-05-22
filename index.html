@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
+      background: linear-gradient(to right, #f4f8fa, #dceefc);
       color: #222;
     }
 
@@ -52,6 +52,8 @@
       display: flex;
       flex-direction: column;
       gap: 30px;
+      border-left: 4px solid #ccc;
+      padding-left: 20px;
     }
 
     .product {
@@ -59,145 +61,30 @@
       padding: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       color: #222;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      position: relative;
+    }
+
+    .product::before {
+      content: "";
+      position: absolute;
+      left: -32px;
+      top: 25px;
+      width: 16px;
+      height: 16px;
+      background-color: #007bff;
+      border-radius: 50%;
+      border: 3px solid white;
     }
 
     .electrical {
       background-color: #e3f0ff;
-      border-left: 8px solid #007bff;
     }
 
     .hardware {
       background-color: #e6f5ea;
-      border-left: 8px solid #28a745;
     }
 
     .plumbing {
-      background-color: #fff4d6;
-      border-left: 8px solid #ffc107;
-    }
-
-    .product-info {
-      max-width: 75%;
-    }
-
-    .product h3 {
-      margin-top: 0;
-      color: #003366;
-    }
-
-    .product p {
-      margin: 10px 0 0;
-      font-size: 1rem;
-    }
-
-    .product a {
-      text-decoration: none;
-      background-color: #003366;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .product a:hover {
-      background-color: #0059b3;
-    }
-
-    .contact {
-      background-color: #003366;
-      color: white;
-      border-radius: 10px;
-      padding: 30px;
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .contact a {
-      color: #ffc107;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #001f3f;
-      color: #ccc;
-    }
-
-    @media (max-width: 600px) {
-      .brand-box {
-        font-size: 2rem;
-        padding: 10px 20px;
-      }
-
-      .tagline {
-        font-size: 0.9rem;
-      }
-
-      .product {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .product a {
-        margin-top: 10px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="brand-box">BRANDS VALUE!</div>
-    <div class="tagline">Your trusted source for Electrical, Hardware & Plumbing products</div>
-  </header>
-
-  <section>
-    <h2>Our Product Categories</h2>
-    <div class="products">
-      <div class="product electrical">
-        <div class="product-info">
-          <h3>Electrical Items</h3>
-          <p>Switches, wires, MCBs, panels, and lighting solutions.</p>
-        </div>
-        <a href="#electrical-products">View Products</a>
-      </div>
-
-      <div class="product hardware">
-        <div class="product-info">
-          <h3>Hardware</h3>
-          <p>Hand tools, power tools, fasteners, safety equipment, and tool kits.</p>
-        </div>
-        <a href="#hardware-products">View Products</a>
-      </div>
-
-      <div class="product plumbing">
-        <div class="product-info">
-          <h3>Plumbing Essentials</h3>
-          <p>Pipes, taps, elbows, shower fittings, and sanitary items.</p>
-        </div>
-        <a href="#plumbing-products">View Products</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>📞 Phone: <a href="tel:9205533262">9205533262</a></p>
-    <p>📧 Email: <a href="mailto:ratishkarn103@gmail.com">ratishkarn103@gmail.com</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Brands Value. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
-
 
   
 
