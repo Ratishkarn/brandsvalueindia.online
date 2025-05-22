@@ -21,7 +21,7 @@
 
     .brand-box {
       display: inline-block;
-      background-color: #0056b3; /* Blue background */
+      background-color: #0056b3;
       color: white;
       padding: 14px 30px;
       font-size: 2.8rem;
@@ -59,29 +59,25 @@
       color: #003366;
     }
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .product {
+    details {
       background-color: #ffffff;
       border-left: 5px solid #007bff;
       border-radius: 8px;
       padding: 20px;
+      margin-bottom: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
       color: #444;
     }
 
-    .product h3 {
-      margin-top: 0;
+    summary {
+      font-weight: bold;
+      font-size: 1.2rem;
+      cursor: pointer;
       color: #003366;
     }
 
-    .product p {
-      margin: 10px 0 0;
-      font-size: 0.95rem;
+    ul {
+      margin: 15px 0 0 20px;
     }
 
     .contact {
@@ -131,20 +127,39 @@
 
   <section>
     <h2>Our Product Categories</h2>
-    <div class="products">
-      <div class="product">
-        <h3>Electrical Items</h3>
-        <p>Switches, wires, MCBs, panels, and lighting solutions.</p>
-      </div>
-      <div class="product">
-        <h3>Electronic Devices</h3>
-        <p>Multimeters, testing tools, soldering kits, batteries, and more.</p>
-      </div>
-      <div class="product">
-        <h3>Plumbing Essentials</h3>
-        <p>Pipes, taps, elbows, shower fittings, and sanitary items.</p>
-      </div>
-    </div>
+
+    <details>
+      <summary>Electrical Items</summary>
+      <ul>
+        <li>Switches</li>
+        <li>Wires & Cables</li>
+        <li>MCBs & DB Panels</li>
+        <li>LED Lights & Fixtures</li>
+        <li>Extension Boards</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Electronic Devices</summary>
+      <ul>
+        <li>Multimeters</li>
+        <li>Soldering Irons</li>
+        <li>Testing Equipment</li>
+        <li>Power Supplies</li>
+        <li>Rechargeable Batteries</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Plumbing Essentials</summary>
+      <ul>
+        <li>PVC Pipes & Elbows</li>
+        <li>Water Taps</li>
+        <li>Shower Heads</li>
+        <li>Faucet Fittings</li>
+        <li>Sanitary Products</li>
+      </ul>
+    </details>
   </section>
 
   <section class="contact">
@@ -159,7 +174,6 @@
 
 </body>
 </html>
-
 
 
   
