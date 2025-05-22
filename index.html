@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Brands Value</title>
+<title>Brands Value - Categories with Toggle Products</title>
 <style>
   body {
     margin: 0;
@@ -15,9 +15,9 @@
   header {
     text-align: center;
     padding: 50px 20px 20px;
-    position: relative;
     background: white;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    user-select: none;
   }
 
   .brand-box {
@@ -25,11 +25,10 @@
     font-weight: 900;
     color: #1e90ff;
     margin-bottom: 15px;
-    user-select: none;
   }
 
   .trusted-source {
-    background: #ffeb3b; /* yellow */
+    background: #ffeb3b;
     padding: 15px 20px;
     border-radius: 12px;
     font-weight: 600;
@@ -38,7 +37,6 @@
     margin: 0 auto;
     box-shadow: 0 2px 8px rgba(255, 235, 59, 0.4);
     color: #222;
-    user-select: none;
   }
 
   .categories {
@@ -57,7 +55,14 @@
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(30, 144, 255, 0.15);
     color: #1e90ff;
+    cursor: pointer;
     user-select: none;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+  }
+
+  .category-card:hover {
+    box-shadow: 0 6px 20px rgba(30, 144, 255, 0.3);
   }
 
   .category-card h3 {
@@ -73,6 +78,14 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+
+  .product-list.show {
+    max-height: 1000px; /* enough to show all */
+    padding-top: 10px;
   }
 
   .product-list li {
@@ -83,7 +96,6 @@
     margin-bottom: 12px;
     font-weight: 600;
     transition: background-color 0.3s ease;
-    cursor: default;
   }
 
   .product-list li:nth-child(odd) {
@@ -116,8 +128,7 @@
 </header>
 
 <section class="categories">
-  
-  <div class="category-card">
+  <div class="category-card" onclick="toggleProducts(this)">
     <h3>Electrical Items</h3>
     <ul class="product-list">
       <li>Switches</li>
@@ -127,8 +138,8 @@
       <li>Lighting Solutions</li>
     </ul>
   </div>
-  
-  <div class="category-card">
+
+  <div class="category-card" onclick="toggleProducts(this)">
     <h3>Plumbing Essentials</h3>
     <ul class="product-list">
       <li>Pipes</li>
@@ -138,8 +149,8 @@
       <li>Sanitary Items</li>
     </ul>
   </div>
-  
-  <div class="category-card">
+
+  <div class="category-card" onclick="toggleProducts(this)">
     <h3>Hardware Supplies</h3>
     <ul class="product-list">
       <li>Hammers</li>
@@ -149,11 +160,29 @@
       <li>Drills</li>
     </ul>
   </div>
-
 </section>
+
+<script>
+  function toggleProducts(categoryCard) {
+    const productList = categoryCard.querySelector('.product-list');
+    const isShown = productList.classList.contains('show');
+
+    // Close all product lists first
+    document.querySelectorAll('.product-list').forEach(list => {
+      list.classList.remove('show');
+    });
+
+    // If previously closed, open this one
+    if (!isShown) {
+      productList.classList.add('show');
+      categoryCard.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+  }
+</script>
 
 </body>
 </html>
+
 
 
 
