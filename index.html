@@ -8,29 +8,32 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #e6ecf3, #f1f5f9);
+      /* Pure background image */
+      background: url('https://ronixtools.com/en/blog/wp-content/uploads/2024/10/Best-Electrical-Tool-Brands-A-List-of-10-Manufacturers.webp') no-repeat center center fixed;
+      background-size: cover;
       color: #222;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Dark overlay on whole page for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.45);
+      z-index: -1;
     }
 
     header {
-      background: url('https://ronixtools.com/en/blog/wp-content/uploads/2024/10/Best-Electrical-Tool-Brands-A-List-of-10-Manufacturers.webp') no-repeat center center/cover;
       padding: 60px 20px;
       text-align: center;
       color: white;
       position: relative;
-    }
-
-    /* Dark overlay for better text visibility */
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 0;
+      z-index: 1;
     }
 
     .brand-box {
-      position: relative;
       display: inline-block;
       background-color: #007bff;
       color: white;
@@ -38,21 +41,23 @@
       font-size: 2.8rem;
       font-weight: bold;
       border-radius: 10px;
-      z-index: 1;
     }
 
     header p {
-      position: relative;
       margin-top: 15px;
-      color: #fff;
       font-size: 1.1rem;
-      z-index: 1;
     }
 
     section {
       padding: 50px 20px;
       max-width: 1000px;
       margin: auto;
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      color: #222;
+      position: relative;
+      z-index: 1;
     }
 
     h2 {
@@ -74,6 +79,7 @@
       border-radius: 8px;
       padding: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      color: #444;
     }
 
     .product h3 {
@@ -84,7 +90,6 @@
     .product p {
       margin: 10px 0 0;
       font-size: 0.95rem;
-      color: #444;
     }
 
     .contact {
@@ -94,6 +99,8 @@
       padding: 30px;
       text-align: center;
       margin-top: 40px;
+      position: relative;
+      z-index: 1;
     }
 
     .contact a {
@@ -106,6 +113,26 @@
       padding: 15px;
       background-color: #001f3f;
       color: #ccc;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Note section below footer */
+    .note {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ddd;
+      margin: 15px 0 40px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .note a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+    .note a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
@@ -151,7 +178,16 @@
     <p>&copy; 2025 Brands Value. All rights reserved.</p>
   </footer>
 
+  <div class="note">
+    ELECTRICAL ELECTRONICS & PLUMBING HARDWARE STORE — 
+    <a href="https://www.freepik.com/premium-photo/high-voltage-power-lines-sunset_7282767.htm#fromView=keyword&page=1&position=28&uuid=a5fec78c-27fa-4c9a-bea7-d91b28dfd4dc&query=Electrical+Background" target="_blank" rel="noopener noreferrer">
+      Image Source
+    </a>
+  </div>
+
 </body>
 </html>
 
+
+  
 
