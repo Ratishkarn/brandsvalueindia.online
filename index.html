@@ -101,6 +101,94 @@
       color: white;
       border-radius: 10px;
       padding: 30px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact a {
+      color: #ffc107;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #001f3f;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .product-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand-box">BRANDS VALUE!</div>
+    <div class="tagline-pill">
+      Your trusted source for Electrical, Electronics & Plumbing products
+    </div>
+  </header>
+
+  <section>
+    <h2>Our Product Categories</h2>
+    <div class="product-row">
+      <div class="category electrical">
+        <details open>
+          <summary>Electrical Items</summary>
+          <ul>
+            <li>Switches</li>
+            <li>Wires & Cables</li>
+            <li>MCBs & DB Panels</li>
+            <li>LED Lights & Fixtures</li>
+            <li>Extension Boards</li>
+          </ul>
+        </details>
+      </div>
+      <div class="category electronic">
+        <details open>
+          <summary>Electronic Devices</summary>
+          <ul>
+            <li>Multimeters</li>
+            <li>Soldering Irons</li>
+            <li>Testing Equipment</li>
+            <li>Power Supplies</li>
+            <li>Rechargeable Batteries</li>
+          </ul>
+        </details>
+      </div>
+      <div class="category plumbing">
+        <details open>
+          <summary>Plumbing Essentials</summary>
+          <ul>
+            <li>PVC Pipes & Elbows</li>
+            <li>Water Taps</li>
+            <li>Shower Heads</li>
+            <li>Faucet Fittings</li>
+            <li>Sanitary Products</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 Phone: <a href="tel:9205533262">9205533262</a></p>
+    <p>📧 Email: <a href="mailto:ratishkarn103@gmail.com">ratishkarn103@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Brands Value. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
 
 
   
