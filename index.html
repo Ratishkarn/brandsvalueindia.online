@@ -5,189 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Brands Value</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      /* Freepik background image */
-      background: url('https://img.freepik.com/premium-photo/high-voltage-power-lines-sunset_7282767.jpg?w=1380') no-repeat center center fixed;
-      background-size: cover;
-      color: #222;
-      position: relative;
-      min-height: 100vh;
+    /* Reset margin/padding */
+    * {
+      box-sizing: border-box;
     }
 
-    /* Dark overlay on whole page for readability */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://img.freepik.com/premium-photo/high-voltage-power-lines-sunset_7282767.jpg?w=1380') no-repeat center center fixed;
+      background-size: cover;
+      color: #2c3e50;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Dark overlay for better contrast */
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.45);
+      background: rgba(15, 32, 64, 0.75);
       z-index: -1;
     }
 
     header {
-      padding: 60px 20px;
+      padding: 70px 20px 60px;
       text-align: center;
-      color: white;
+      color: #f1f6f9;
       position: relative;
       z-index: 1;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.7);
     }
 
     .brand-box {
       display: inline-block;
-      background-color: #007bff;
+      background-color: #1e90ff;
       color: white;
-      padding: 14px 30px;
-      font-size: 2.8rem;
-      font-weight: bold;
-      border-radius: 10px;
+      padding: 16px 40px;
+      font-size: 3rem;
+      font-weight: 900;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(30, 144, 255, 0.6);
+      letter-spacing: 2px;
+      user-select: none;
+      transition: background-color 0.3s ease;
+      cursor: default;
+    }
+
+    .brand-box:hover {
+      background-color: #0073e6;
+      box-shadow: 0 7px 20px rgba(0, 115, 230, 0.8);
     }
 
     header p {
-      margin-top: 15px;
-      font-size: 1.1rem;
+      margin-top: 20px;
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #dbe9fb;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.7);
     }
 
     section {
-      padding: 50px 20px;
       max-width: 1000px;
-      margin: auto;
-      background-color: rgba(255, 255, 255, 0.85);
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      color: #222;
+      margin: 40px auto 60px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+      padding: 45px 35px;
+      color: #2c3e50;
       position: relative;
       z-index: 1;
+      transition: box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      box-shadow: 0 15px 35px rgba(0,0,0,0.18);
     }
 
     h2 {
       text-align: center;
-      font-size: 1.8rem;
-      margin-bottom: 30px;
-      color: #003366;
+      font-size: 2rem;
+      margin-bottom: 35px;
+      color: #1a3c6e;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
     }
 
     .product {
-      background-color: #ffffff;
-      border-left: 5px solid #007bff;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      color: #444;
+      background-color: #f8faff;
+      border-left: 6px solid #1e90ff;
+      border-radius: 12px;
+      padding: 28px 25px;
+      box-shadow: 0 4px 12px rgba(30, 144, 255, 0.12);
+      color: #34495e;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+      user-select: none;
     }
-
-    .product h3 {
-      margin-top: 0;
-      color: #003366;
-    }
-
-    .product p {
-      margin: 10px 0 0;
-      font-size: 0.95rem;
-    }
-
-    .contact {
-      background-color: #003366;
-      color: white;
-      border-radius: 10px;
-      padding: 30px;
-      text-align: center;
-      margin-top: 40px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .contact a {
-      color: #ffc107;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #001f3f;
-      color: #ccc;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Note section below footer */
-    .note {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #ddd;
-      margin: 15px 0 40px 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    .note a {
-      color: #ffc107;
-      text-decoration: none;
-    }
-    .note a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      .brand-box {
-        font-size: 2rem;
-        padding: 10px 20px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="brand-box">Brand Value!</div>
-    <p>Your trusted source for Electrical, Electronics & Plumbing products</p>
-  </header>
-
-  <section>
-    <h2>Our Product Categories</h2>
-    <div class="products">
-      <div class="product">
-        <h3>Electrical Items</h3>
-        <p>Switches, wires, MCBs, panels, and lighting solutions.</p>
-      </div>
-      <div class="product">
-        <h3>Electronic Devices</h3>
-        <p>Multimeters, testing tools, soldering kits, batteries, and more.</p>
-      </div>
-      <div class="product">
-        <h3>Plumbing Essentials</h3>
-        <p>Pipes, taps, elbows, shower fittings, and sanitary items.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>📞 Phone: <a href="tel:9205533262">9205533262</a></p>
-    <p>📧 Email: <a href="mailto:ratishkarn103@gmail.com">ratishkarn103@gmail.com</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Brands Value. All rights reserved.</p>
-  </footer>
-
-  <div class="note">
-    ELECTRICAL ELECTRONICS & PLUMBING HARDWARE STORE — 
-    <a href="https://www.freepik.com/premium-photo/high-voltage-power-lines-sunset_7282767.htm#fromView=keyword&page=1&position=28&uuid=a5fec78c-27fa-4c9a-bea7-d91b28dfd4dc&query=Electrical+Background" target="_blank" rel="noopener noreferrer">
-      Image Source
-    </a>
-  </div>
-
-</body>
-</html>
-
 
   
 
