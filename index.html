@@ -7,133 +7,141 @@
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #f0f4ff, #d1e8ff);
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
       color: #2c3e50;
+      padding: 0 10px;
     }
 
     header {
-      padding: 30px 20px;
       text-align: center;
-      background: #1e90ff;
-      color: white;
+      padding: 50px 20px 20px;
     }
 
     .brand-box {
-      font-size: 3rem;
-      font-weight: 900;
+      display: inline-block;
       background-color: #1e90ff;
       color: white;
-      padding: 20px 40px;
+      font-size: 3rem;
+      font-weight: bold;
+      padding: 15px 40px;
       border-radius: 12px;
-      display: inline-block;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 15px rgba(30, 144, 255, 0.5);
     }
 
     .tagline {
-      margin-top: 20px;
-      font-size: 1.2rem;
-      background: #ffeb3b;
-      color: #000;
-      padding: 12px 25px;
-      border-radius: 20px;
+      background-color: #ffd700;
       display: inline-block;
+      margin-top: 15px;
+      padding: 10px 25px;
+      font-size: 1.2rem;
       font-weight: 600;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      border-radius: 20px;
+      color: #333;
     }
 
     section {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 40px auto;
-      padding: 30px 20px;
+      background-color: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     }
 
     h2 {
       text-align: center;
       margin-bottom: 30px;
-      font-size: 1.8rem;
       color: #003366;
+      font-size: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
     }
 
     .categories {
       display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      background-color: #fff59d;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      flex-direction: column;
+      gap: 30px;
     }
 
     .category {
-      flex: 1 1 300px;
-      min-width: 280px;
-      border-radius: 12px;
       padding: 20px;
-      background: white;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
 
     .category h3 {
-      margin-top: 0;
+      margin-bottom: 12px;
       font-size: 1.5rem;
-      color: #1a3c6e;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 8px;
     }
 
     .category ul {
-      text-align: left;
+      list-style-type: none;
       padding-left: 20px;
-      margin: 10px 0 15px;
     }
 
-    .category li {
+    .category ul li {
       margin-bottom: 6px;
+      font-size: 1rem;
       color: #333;
+      cursor: pointer;
     }
 
-    .step {
-      margin-top: 15px;
-      padding: 10px;
-      background: #f0f0f0;
-      color: #333;
-      border-left: 4px solid #1e88e5;
-      font-weight: 600;
-      border-radius: 6px;
+    .electrical {
+      background-color: #d1e7ff;
+    }
+
+    .electrical h3 {
+      background-color: #1e90ff;
+    }
+
+    .plumbing {
+      background-color: #e0ffe0;
+    }
+
+    .plumbing h3 {
+      background-color: #28a745;
+    }
+
+    .hardware {
+      background-color: #fff2cc;
+    }
+
+    .hardware h3 {
+      background-color: #ff9800;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #0d214a;
-      color: #ccc;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      .categories {
-        flex-direction: column;
-        align-items: center;
-      }
+      margin-top: 40px;
+      background-color: #003366;
+      color: white;
+      border-radius: 0 0 12px 12px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="brand-box">Brands Value!</div>
+    <div class="brand-box">BRANDS VALUE!</div>
     <div class="tagline">Your trusted source for Electrical, Plumbing & Hardware products</div>
   </header>
 
   <section>
-    <h2>Product Categories</h2>
+    <h2>Explore Our Categories</h2>
     <div class="categories">
-      <div class="category">
-        <h3>Electrical</h3>
+      
+      <div class="category electrical">
+        <h3>Electrical Items</h3>
         <ul>
           <li>Switches</li>
           <li>Wires</li>
@@ -141,11 +149,10 @@
           <li>Panels</li>
           <li>Lighting Solutions</li>
         </ul>
-        <div class="step">Step: Click on "Electrical" in the top menu to view all items.</div>
       </div>
 
-      <div class="category">
-        <h3>Plumbing</h3>
+      <div class="category plumbing">
+        <h3>Plumbing Essentials</h3>
         <ul>
           <li>Pipes</li>
           <li>Taps</li>
@@ -153,20 +160,19 @@
           <li>Shower Fittings</li>
           <li>Sanitary Items</li>
         </ul>
-        <div class="step">Step: Click on "Plumbing" in the top menu to view all items.</div>
       </div>
 
-      <div class="category">
-        <h3>Hardware</h3>
+      <div class="category hardware">
+        <h3>Hardware Tools</h3>
         <ul>
-          <li>Drills</li>
-          <li>Hammers</li>
+          <li>Drill Machines</li>
+          <li>Screwdrivers</li>
+          <li>Spanners</li>
           <li>Nuts & Bolts</li>
-          <li>Door Locks</li>
-          <li>Wall Plugs</li>
+          <li>Measuring Tools</li>
         </ul>
-        <div class="step">Step: Click on "Hardware" in the top menu to view all items.</div>
       </div>
+
     </div>
   </section>
 
