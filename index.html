@@ -8,44 +8,36 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+      background: linear-gradient(to right, #f0f4f8, #d9e2ec);
       color: #222;
     }
 
     header {
-      padding: 60px 20px 30px;
+      padding: 60px 20px;
       text-align: center;
-      background: linear-gradient(135deg, #007bff, #003366);
+      background-color: #007bff;
       color: white;
     }
 
     .brand-box {
-      display: inline-block;
-      background-color: #0056b3;
-      color: white;
-      padding: 14px 30px;
       font-size: 2.8rem;
       font-weight: bold;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 14px 30px;
     }
 
-    .tagline-pill {
-      margin: 25px auto 0;
-      padding: 15px 30px;
-      max-width: 600px;
-      background-color: #ffffff;
-      color: #003366;
-      font-weight: 600;
-      font-size: 1.1rem;
-      border-radius: 50px;
-      border: 3px solid #007bff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    .tagline {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background-color: #fff;
+      color: #007bff;
+      font-weight: 500;
     }
 
     section {
       padding: 50px 20px;
-      max-width: 1200px;
+      max-width: 1000px;
       margin: auto;
     }
 
@@ -56,44 +48,45 @@
       color: #003366;
     }
 
-    .product-row {
+    .products {
       display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
+      gap: 30px;
     }
 
-    .category {
-      flex: 1 1 300px;
-      border-radius: 10px;
+    .product {
+      background-color: #ffffff;
+      border-left: 5px solid #007bff;
+      border-radius: 8px;
       padding: 20px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      color: #444;
+      border-left: 8px solid;
     }
 
     .electrical {
-      background-color: #e0f2ff;
-      border-left: 5px solid #007bff;
+      border-color: #007bff;
+      background-color: #e3f0ff;
     }
 
-    .electronic {
-      background-color: #e0ffe0;
-      border-left: 5px solid #28a745;
+    .hardware {
+      border-color: #28a745;
+      background-color: #e6f5ea;
     }
 
     .plumbing {
-      background-color: #fff3e0;
-      border-left: 5px solid #ff9800;
+      border-color: #ffc107;
+      background-color: #fff8e1;
     }
 
-    summary {
-      font-weight: bold;
-      font-size: 1.2rem;
-      cursor: pointer;
+    .product h3 {
+      margin-top: 0;
       color: #003366;
     }
 
-    ul {
-      margin: 15px 0 0 20px;
+    .product p {
+      margin: 10px 0 0;
+      font-size: 0.95rem;
     }
 
     .contact {
@@ -108,7 +101,6 @@
     .contact a {
       color: #ffc107;
       font-weight: bold;
-      text-decoration: none;
     }
 
     footer {
@@ -118,10 +110,14 @@
       color: #ccc;
     }
 
-    @media (max-width: 768px) {
-      .product-row {
-        flex-direction: column;
-        align-items: stretch;
+    @media (max-width: 600px) {
+      .brand-box {
+        font-size: 2rem;
+        padding: 10px 20px;
+      }
+
+      .tagline {
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -130,49 +126,23 @@
 
   <header>
     <div class="brand-box">BRANDS VALUE!</div>
-    <div class="tagline-pill">
-      Your trusted source for Electrical, Electronics & Plumbing products
-    </div>
+    <div class="tagline">Your trusted source for Electrical, Hardware & Plumbing products</div>
   </header>
 
   <section>
     <h2>Our Product Categories</h2>
-    <div class="product-row">
-      <div class="category electrical">
-        <details open>
-          <summary>Electrical Items</summary>
-          <ul>
-            <li>Switches</li>
-            <li>Wires & Cables</li>
-            <li>MCBs & DB Panels</li>
-            <li>LED Lights & Fixtures</li>
-            <li>Extension Boards</li>
-          </ul>
-        </details>
+    <div class="products">
+      <div class="product electrical">
+        <h3>Electrical Items</h3>
+        <p>Switches, wires, MCBs, panels, and lighting solutions.</p>
       </div>
-      <div class="category electronic">
-        <details open>
-          <summary>Electronic Devices</summary>
-          <ul>
-            <li>Multimeters</li>
-            <li>Soldering Irons</li>
-            <li>Testing Equipment</li>
-            <li>Power Supplies</li>
-            <li>Rechargeable Batteries</li>
-          </ul>
-        </details>
+      <div class="product hardware">
+        <h3>Hardware</h3>
+        <p>Hand tools, power tools, fasteners, safety equipment, and tool kits.</p>
       </div>
-      <div class="category plumbing">
-        <details open>
-          <summary>Plumbing Essentials</summary>
-          <ul>
-            <li>PVC Pipes & Elbows</li>
-            <li>Water Taps</li>
-            <li>Shower Heads</li>
-            <li>Faucet Fittings</li>
-            <li>Sanitary Products</li>
-          </ul>
-        </details>
+      <div class="product plumbing">
+        <h3>Plumbing Essentials</h3>
+        <p>Pipes, taps, elbows, shower fittings, and sanitary items.</p>
       </div>
     </div>
   </section>
