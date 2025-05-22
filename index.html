@@ -1,183 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Brands Value - Categories in One Row</title>
-<style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f0f4f8;
-    color: #2c3e50;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brands Value</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-  header {
-    text-align: center;
-    padding: 50px 20px 20px;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    user-select: none;
-  }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+    }
 
-  .brand-box {
-    font-size: 3rem;
-    font-weight: 900;
-    color: #1e90ff;
-    margin-bottom: 15px;
-  }
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
 
-  .trusted-source {
-    background: #ffeb3b;
-    padding: 15px 20px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 1.2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    box-shadow: 0 2px 8px rgba(255, 235, 59, 0.4);
-    color: #222;
-  }
+    .brand-box {
+      display: inline-block;
+      background-color: #1e90ff;
+      color: white;
+      padding: 16px 40px;
+      font-size: 3rem;
+      font-weight: 900;
+      border-radius: 15px;
+      letter-spacing: 2px;
+    }
 
-  .categories {
-    max-width: 1000px;
-    margin: 40px auto;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-  }
+    .tagline {
+      margin-top: 20px;
+      background-color: #fdd835;
+      padding: 12px 20px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 8px;
+      display: inline-block;
+      color: #333;
+    }
 
-  .category-card {
-    background: white;
-    flex: 1 1 280px;
-    padding: 25px 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(30, 144, 255, 0.15);
-    color: #1e90ff;
-    cursor: pointer;
-    user-select: none;
-    transition: box-shadow 0.3s ease;
-    position: relative;
-  }
-
-  .category-card:hover {
-    box-shadow: 0 6px 20px rgba(30, 144, 255, 0.3);
-  }
-
-  .category-card h3 {
-    margin-top: 0;
-    font-weight: 700;
-    font-size: 1.6rem;
-    border-bottom: 2px solid #1e90ff;
-    padding-bottom: 8px;
-    margin-bottom: 15px;
-  }
-
-  .product-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-  }
-
-  .product-list.show {
-    max-height: 1000px; /* enough to show all */
-    padding-top: 10px;
-  }
-
-  .product-list li {
-    background: #dbe9fb;
-    color: #125dca;
-    padding: 10px 15px;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-  }
-
-  .product-list li:nth-child(odd) {
-    background: #bbdefb;
-  }
-
-  .product-list li:hover {
-    background-color: #90caf9;
-  }
-
-  @media (max-width: 900px) {
     .categories {
-      flex-direction: column;
-      max-width: 90%;
+      display: flex;
+      justify-content: center;
+      margin: 40px auto;
+      gap: 30px;
+      flex-wrap: wrap;
     }
 
-    .category-card {
-      flex: 1 1 auto;
+    details {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 280px;
+      transition: 0.3s;
     }
-  }
-</style>
+
+    summary {
+      cursor: pointer;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #125dca;
+      margin-bottom: 10px;
+    }
+
+    details[open] {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      color: #333;
+    }
+
+    footer, .contact {
+      text-align: center;
+      padding: 30px 15px;
+      background-color: #125dca;
+      color: white;
+      margin-top: 60px;
+    }
+
+    .contact h2 {
+      margin-bottom: 15px;
+    }
+
+    .contact a {
+      color: #ffd54f;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <div class="brand-box">Brands Value!</div>
-  <div class="trusted-source">
-    Your trusted source for Electrical, Plumbing & Hardware products
-  </div>
-</header>
+  <header>
+    <div class="brand-box">BRANDS VALUE!</div>
+    <div class="tagline">Your trusted source for Electrical, Plumbing & Hardware products</div>
+  </header>
 
-<section class="categories">
-  <div class="category-card" onclick="toggleProducts(this)">
-    <h3>Electrical Items</h3>
-    <ul class="product-list">
-      <li>Switches</li>
-      <li>Wires</li>
-      <li>MCBs</li>
-      <li>Panels</li>
-      <li>Lighting Solutions</li>
-    </ul>
-  </div>
+  <section class="categories">
+    <details>
+      <summary>Electrical Items</summary>
+      <ul>
+        <li>Switches</li>
+        <li>Wires</li>
+        <li>MCBs</li>
+        <li>Panels</li>
+        <li>Lighting Solutions</li>
+      </ul>
+    </details>
 
-  <div class="category-card" onclick="toggleProducts(this)">
-    <h3>Plumbing Essentials</h3>
-    <ul class="product-list">
-      <li>Pipes</li>
-      <li>Taps</li>
-      <li>Elbows</li>
-      <li>Shower Fittings</li>
-      <li>Sanitary Items</li>
-    </ul>
-  </div>
+    <details>
+      <summary>Plumbing Essentials</summary>
+      <ul>
+        <li>Pipes</li>
+        <li>Taps</li>
+        <li>Elbows</li>
+        <li>Shower Fittings</li>
+        <li>Sanitary Items</li>
+      </ul>
+    </details>
 
-  <div class="category-card" onclick="toggleProducts(this)">
-    <h3>Hardware Supplies</h3>
-    <ul class="product-list">
-      <li>Hammers</li>
-      <li>Screwdrivers</li>
-      <li>Wrenches</li>
-      <li>Nails & Screws</li>
-      <li>Drills</li>
-    </ul>
-  </div>
-</section>
+    <details>
+      <summary>Hardware Supplies</summary>
+      <ul>
+        <li>Nuts & Bolts</li>
+        <li>Hinges</li>
+        <li>Screws</li>
+        <li>Drills</li>
+        <li>Locks</li>
+      </ul>
+    </details>
+  </section>
 
-<script>
-  function toggleProducts(categoryCard) {
-    const productList = categoryCard.querySelector('.product-list');
-    const isShown = productList.classList.contains('show');
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 Phone: <a href="tel:9205533262">9205533262</a></p>
+    <p>📧 Email: <a href="mailto:ratishkarn103@gmail.com">ratishkarn103@gmail.com</a></p>
+  </section>
 
-    // Close all product lists first
-    document.querySelectorAll('.product-list').forEach(list => {
-      list.classList.remove('show');
-    });
-
-    // If previously closed, open this one
-    if (!isShown) {
-      productList.classList.add('show');
-      categoryCard.scrollIntoView({behavior: 'smooth', block: 'start'});
-    }
-  }
-</script>
+  <footer>
+    &copy; 2025 Brands Value. All rights reserved.
+  </footer>
 
 </body>
 </html>
