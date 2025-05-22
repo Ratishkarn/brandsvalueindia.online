@@ -17,7 +17,7 @@
     }
 
     header {
-      padding: 60px 20px 30px;
+      padding: 40px 20px;
       text-align: center;
       background: #1e90ff;
       color: white;
@@ -34,24 +34,22 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
-    header p {
-      background: #ffeb3b;
-      color: #333;
+    .tagline {
+      margin-top: 15px;
       font-size: 1.2rem;
+      background: #ffffff;
+      color: #1e3a6d;
+      padding: 10px 25px;
+      border-radius: 25px;
       display: inline-block;
-      padding: 12px 25px;
-      border-radius: 50px;
-      margin-top: 20px;
       font-weight: 600;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
     }
 
     section {
-      max-width: 900px;
+      max-width: 1200px;
       margin: 40px auto;
       padding: 30px 20px;
-      background: #ffffff;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     h2 {
@@ -61,12 +59,20 @@
       color: #003366;
     }
 
+    .categories {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .category {
-      background-color: #f1f5fc;
-      margin-bottom: 20px;
+      flex: 1 1 300px;
+      min-width: 280px;
+      border-radius: 15px;
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
     .category:nth-child(1) {
@@ -83,31 +89,29 @@
 
     .category h3 {
       margin-top: 0;
-      font-size: 1.4rem;
-      color: #2c3e50;
+      font-size: 1.5rem;
+      color: #1a3c6e;
     }
 
     .category ul {
-      margin: 10px 0 15px 20px;
-      padding: 0;
+      text-align: left;
+      padding-left: 20px;
+      margin: 10px 0 15px;
     }
 
-    .category ul li {
-      list-style: disc;
-      margin: 5px 0;
-      font-size: 1rem;
-      color: #555;
+    .category li {
+      margin-bottom: 8px;
+      color: #333;
     }
 
     .category a {
       display: inline-block;
-      margin-top: 10px;
       background: #007bff;
       color: white;
-      text-decoration: none;
       padding: 10px 18px;
       border-radius: 8px;
       font-weight: 600;
+      text-decoration: none;
       transition: background 0.3s;
     }
 
@@ -122,51 +126,58 @@
       color: #ccc;
       font-size: 0.9rem;
     }
+
+    @media (max-width: 768px) {
+      .categories {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="brand-box">Brand Value!</div>
-    <p>Your trusted source for Electrical, Electronics & Plumbing products</p>
+    <div class="brand-box">Brands Value!</div>
+    <div class="tagline">Your trusted source for Electrical, Electronics & Plumbing products</div>
   </header>
 
   <section>
     <h2>Product Categories</h2>
+    <div class="categories">
+      <div class="category">
+        <h3>Electronics</h3>
+        <ul>
+          <li>Multimeters</li>
+          <li>Testing Tools</li>
+          <li>Soldering Kits</li>
+          <li>Batteries</li>
+        </ul>
+        <a href="#">Enter</a>
+      </div>
 
-    <div class="category">
-      <h3>Electronics</h3>
-      <ul>
-        <li>Multimeters</li>
-        <li>Testing Tools</li>
-        <li>Soldering Kits</li>
-        <li>Batteries</li>
-      </ul>
-      <a href="#">Enter</a>
+      <div class="category">
+        <h3>Plumbing</h3>
+        <ul>
+          <li>Pipes</li>
+          <li>Taps</li>
+          <li>Shower Fittings</li>
+          <li>Sanitary Items</li>
+        </ul>
+        <a href="#">Enter</a>
+      </div>
+
+      <div class="category">
+        <h3>Hardware</h3>
+        <ul>
+          <li>Switches</li>
+          <li>Wires</li>
+          <li>MCBs</li>
+          <li>Panels</li>
+        </ul>
+        <a href="#">Enter</a>
+      </div>
     </div>
-
-    <div class="category">
-      <h3>Plumbing</h3>
-      <ul>
-        <li>Pipes</li>
-        <li>Taps</li>
-        <li>Shower Fittings</li>
-        <li>Sanitary Items</li>
-      </ul>
-      <a href="#">Enter</a>
-    </div>
-
-    <div class="category">
-      <h3>Hardware</h3>
-      <ul>
-        <li>Switches</li>
-        <li>Wires</li>
-        <li>MCBs</li>
-        <li>Panels</li>
-      </ul>
-      <a href="#">Enter</a>
-    </div>
-
   </section>
 
   <footer>
@@ -175,6 +186,7 @@
 
 </body>
 </html>
+
 
   
 
