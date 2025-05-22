@@ -17,7 +17,7 @@
     }
 
     header {
-      padding: 40px 20px;
+      padding: 30px 20px;
       text-align: center;
       background: #1e90ff;
       color: white;
@@ -35,15 +35,15 @@
     }
 
     .tagline {
-      margin-top: 15px;
+      margin-top: 20px;
       font-size: 1.2rem;
-      background: #ffffff;
-      color: #1e3a6d;
-      padding: 10px 25px;
-      border-radius: 25px;
+      background: #ffeb3b;
+      color: #000;
+      padding: 12px 25px;
+      border-radius: 20px;
       display: inline-block;
       font-weight: 600;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
     }
 
     section {
@@ -64,27 +64,19 @@
       gap: 20px;
       flex-wrap: wrap;
       justify-content: center;
+      background-color: #fff59d;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .category {
       flex: 1 1 300px;
       min-width: 280px;
-      border-radius: 15px;
+      border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .category:nth-child(1) {
-      background-color: #e1f5fe;
-    }
-
-    .category:nth-child(2) {
-      background-color: #e8f5e9;
-    }
-
-    .category:nth-child(3) {
-      background-color: #fff3e0;
+      background: white;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     }
 
     .category h3 {
@@ -100,23 +92,18 @@
     }
 
     .category li {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       color: #333;
     }
 
-    .category a {
-      display: inline-block;
-      background: #007bff;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 8px;
+    .step {
+      margin-top: 15px;
+      padding: 10px;
+      background: #f0f0f0;
+      color: #333;
+      border-left: 4px solid #1e88e5;
       font-weight: 600;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .category a:hover {
-      background: #0056b3;
+      border-radius: 6px;
     }
 
     footer {
@@ -139,21 +126,22 @@
 
   <header>
     <div class="brand-box">Brands Value!</div>
-    <div class="tagline">Your trusted source for Electrical, Electronics & Plumbing products</div>
+    <div class="tagline">Your trusted source for Electrical, Plumbing & Hardware products</div>
   </header>
 
   <section>
     <h2>Product Categories</h2>
     <div class="categories">
       <div class="category">
-        <h3>Electronics</h3>
+        <h3>Electrical</h3>
         <ul>
-          <li>Multimeters</li>
-          <li>Testing Tools</li>
-          <li>Soldering Kits</li>
-          <li>Batteries</li>
+          <li>Switches</li>
+          <li>Wires</li>
+          <li>MCBs</li>
+          <li>Panels</li>
+          <li>Lighting Solutions</li>
         </ul>
-        <a href="#">Enter</a>
+        <div class="step">Step: Click on "Electrical" in the top menu to view all items.</div>
       </div>
 
       <div class="category">
@@ -161,21 +149,23 @@
         <ul>
           <li>Pipes</li>
           <li>Taps</li>
+          <li>Elbows</li>
           <li>Shower Fittings</li>
           <li>Sanitary Items</li>
         </ul>
-        <a href="#">Enter</a>
+        <div class="step">Step: Click on "Plumbing" in the top menu to view all items.</div>
       </div>
 
       <div class="category">
         <h3>Hardware</h3>
         <ul>
-          <li>Switches</li>
-          <li>Wires</li>
-          <li>MCBs</li>
-          <li>Panels</li>
+          <li>Drills</li>
+          <li>Hammers</li>
+          <li>Nuts & Bolts</li>
+          <li>Door Locks</li>
+          <li>Wall Plugs</li>
         </ul>
-        <a href="#">Enter</a>
+        <div class="step">Step: Click on "Hardware" in the top menu to view all items.</div>
       </div>
     </div>
   </section>
@@ -186,6 +176,7 @@
 
 </body>
 </html>
+
 
 
   
