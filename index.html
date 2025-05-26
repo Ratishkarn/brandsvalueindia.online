@@ -5,19 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Brands Value - Electrical, Plumbing & Hardware Supplies</title>
 
-  <!-- ✅ Canonical tag -->
   <link rel="canonical" href="https://brandsvalueindia.online/" />
-
-  <!-- ✅ Meta Description -->
   <meta name="description" content="Brands Value - Your trusted source for electrical, plumbing & hardware products in India. Find high-quality switches, pipes, tools and more at great prices.">
-
-  <!-- ✅ Meta Keywords -->
   <meta name="keywords" content="Brands Value, electrical products, plumbing items, hardware tools, India, switches, pipes, tools, online store, electrical supplies, plumbing supplies, hardware supplies">
-
-  <!-- ✅ Robots -->
   <meta name="robots" content="index, follow">
 
-  <!-- ✅ Open Graph tags -->
+  <!-- ✅ Open Graph -->
   <meta property="og:title" content="Brands Value - Electrical, Plumbing & Hardware Supplies">
   <meta property="og:description" content="Find the best deals on electrical, plumbing & hardware products at Brands Value India.">
   <meta property="og:url" content="https://brandsvalueindia.online/">
@@ -49,7 +42,6 @@
   }
   </script>
 
-  <!-- ✅ Styles -->
   <style>
     body {
       margin: 0;
@@ -60,7 +52,7 @@
 
     header {
       text-align: center;
-      padding: 50px 20px 20px;
+      padding: 40px 20px 20px;
       background: white;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       user-select: none;
@@ -68,8 +60,7 @@
 
     header img {
       max-width: 120px;
-      height: auto;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
     .brand-box {
@@ -196,49 +187,47 @@
 <body>
 
 <header>
-  <img src="https://brandsvalueindia.online/logo.jpeg" alt="Brands Value Logo" />
+  <img src="logo.jpeg" alt="Brands Value Logo" />
   <div class="brand-box">Brands Value!</div>
   <div class="trusted-source">
     Your trusted source for Electrical, Plumbing & Hardware products
   </div>
 </header>
 
-<main>
-  <section class="categories">
-    <div class="category-card" onclick="toggleProducts(this)">
-      <h3>Electrical Items</h3>
-      <ul class="product-list">
-        <li>Switches</li>
-        <li>Wires</li>
-        <li>MCBs</li>
-        <li>Panels</li>
-        <li>Lighting Solutions</li>
-      </ul>
-    </div>
+<section class="categories">
+  <div class="category-card" onclick="toggleProducts(this)">
+    <h3>Electrical Items</h3>
+    <ul class="product-list">
+      <li>Switches</li>
+      <li>Wires</li>
+      <li>MCBs</li>
+      <li>Panels</li>
+      <li>Lighting Solutions</li>
+    </ul>
+  </div>
 
-    <div class="category-card" onclick="toggleProducts(this)">
-      <h3>Plumbing Essentials</h3>
-      <ul class="product-list">
-        <li>Pipes</li>
-        <li>Taps</li>
-        <li>Elbows</li>
-        <li>Shower Fittings</li>
-        <li>Sanitary Items</li>
-      </ul>
-    </div>
+  <div class="category-card" onclick="toggleProducts(this)">
+    <h3>Plumbing Essentials</h3>
+    <ul class="product-list">
+      <li>Pipes</li>
+      <li>Taps</li>
+      <li>Elbows</li>
+      <li>Shower Fittings</li>
+      <li>Sanitary Items</li>
+    </ul>
+  </div>
 
-    <div class="category-card" onclick="toggleProducts(this)">
-      <h3>Hardware Supplies</h3>
-      <ul class="product-list">
-        <li>Hammers</li>
-        <li>Screwdrivers</li>
-        <li>Wrenches</li>
-        <li>Nails & Screws</li>
-        <li>Drills</li>
-      </ul>
-    </div>
-  </section>
-</main>
+  <div class="category-card" onclick="toggleProducts(this)">
+    <h3>Hardware Supplies</h3>
+    <ul class="product-list">
+      <li>Hammers</li>
+      <li>Screwdrivers</li>
+      <li>Wrenches</li>
+      <li>Nails & Screws</li>
+      <li>Drills</li>
+    </ul>
+  </div>
+</section>
 
 <footer>
   <p>📞 Contact: <a href="tel:9205533262">9205533262</a></p>
@@ -257,13 +246,14 @@
 
     if (!isShown) {
       productList.classList.add('show');
-      categoryCard.scrollIntoView({behavior: 'smooth', block: 'start'});
+      categoryCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 </script>
 
 </body>
 </html>
+
 
 
 
