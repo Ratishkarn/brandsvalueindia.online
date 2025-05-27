@@ -79,6 +79,9 @@
       width: 250px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: 0.3s;
+      cursor: pointer;
+      user-select: none;
+      text-align: left;
     }
 
     .category-box:hover {
@@ -89,6 +92,20 @@
       color: #007bff;
       border-bottom: 2px solid #007bff;
       padding-bottom: 5px;
+      margin: 0 0 10px 0;
+    }
+
+    .item-list {
+      display: none;
+      margin-top: 10px;
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .category-box.active .item-list {
+      display: block;
     }
 
     footer {
@@ -133,14 +150,32 @@
   </div>
 
   <div class="categories">
-    <div class="category-box">
+    <div class="category-box" tabindex="0">
       <h2>Electrical Items</h2>
+      <ul class="item-list">
+        <li>Switches</li>
+        <li>Wires</li>
+        <li>Circuit Breakers</li>
+        <li>LED Bulbs</li>
+      </ul>
     </div>
-    <div class="category-box">
+    <div class="category-box" tabindex="0">
       <h2>Plumbing Essentials</h2>
+      <ul class="item-list">
+        <li>PVC Pipes</li>
+        <li>Faucets</li>
+        <li>Valves</li>
+        <li>Water Heaters</li>
+      </ul>
     </div>
-    <div class="category-box">
+    <div class="category-box" tabindex="0">
       <h2>Hardware Supplies</h2>
+      <ul class="item-list">
+        <li>Nails</li>
+        <li>Screws</li>
+        <li>Hinges</li>
+        <li>Tools</li>
+      </ul>
     </div>
   </div>
 
@@ -150,6 +185,24 @@
     <p>© 2025 Brands Value. All rights reserved.</p>
   </footer>
 
+  <script>
+    const categories = document.querySelectorAll('.category-box');
+
+    categories.forEach(category => {
+      category.addEventListener('click', () => {
+        // Toggle active class to show/hide items
+        category.classList.toggle('active');
+      });
+
+      // Optional: allow keyboard access (Enter or Space)
+      category.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          category.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
-
