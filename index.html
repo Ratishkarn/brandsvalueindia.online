@@ -32,17 +32,16 @@
       gap: 20px;
       text-decoration: none;
       color: #007bff;
-      justify-content: center;
     }
     .logo {
       height: 110px;
-      width: auto; /* automatic width, keep aspect ratio */
-      object-fit: contain;
-      border-radius: 0; /* no rounding */
-      border: none; /* no border */
+      width: 110px;
+      object-fit: cover;
+      border-radius: 0;      /* circle removed */
+      border: none;          /* border removed */
+      box-shadow: none;      /* shadow removed */
       background-color: transparent;
       flex-shrink: 0;
-      display: block;
     }
     .brand-name {
       font-size: 3.5em;
@@ -96,6 +95,8 @@
       text-decoration: none;
       font-weight: bold;
     }
+
+    /* Responsive tweaks */
     @media (max-width: 600px) {
       header {
         flex-direction: column;
@@ -106,7 +107,7 @@
       }
       .logo {
         height: 90px;
-        width: auto;
+        width: 90px;
       }
     }
   </style>
@@ -144,6 +145,5 @@
 
 </body>
 </html>
-
 
 
