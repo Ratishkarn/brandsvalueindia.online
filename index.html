@@ -7,7 +7,15 @@
   <meta name="keywords" content="Electrical Items, Plumbing Essentials, Hardware Supplies, India">
   <meta name="author" content="Brands Value India">
   <title>Brands Value - Electrical, Plumbing & Hardware</title>
+
+  <!-- Favicon for browsers and Google -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <!-- Optional PNG favicon -->
+  <link rel="icon" href="/brands-logo.png" type="image/png" sizes="32x32" />
+
   <link rel="icon" type="image/png" href="brands-logo.png">
+
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -190,11 +198,9 @@
 
     categories.forEach(category => {
       category.addEventListener('click', () => {
-        // Toggle active class to show/hide items
         category.classList.toggle('active');
       });
 
-      // Optional: allow keyboard access (Enter or Space)
       category.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
