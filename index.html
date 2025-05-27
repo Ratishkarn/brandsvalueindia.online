@@ -18,26 +18,48 @@
     }
     header {
       background: white;
-      padding: 20px;
+      padding: 30px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
     }
-    header img {
-      height: 100px;
-      max-width: 100%;
-    }
-    h1 {
-      font-size: 3em;
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-decoration: none;
       color: #007bff;
-      margin: 0.3em 0;
+    }
+    .logo {
+      height: 110px;
+      width: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #007bff;
+      box-shadow: 0 0 10px rgba(0,123,255,0.3);
+      background-color: white;
+      flex-shrink: 0;
+    }
+    .brand-name {
+      font-size: 3.5em;
+      font-weight: 900;
+      color: #007bff;
+      user-select: none;
+      white-space: nowrap;
     }
     .tagline {
       background: #ffeb3b;
       font-weight: bold;
-      padding: 10px;
+      padding: 10px 25px;
       font-size: 1.1em;
       color: #333;
-      margin-bottom: 40px;
+      margin: 20px auto 40px auto;
       display: inline-block;
       border-radius: 10px;
+      max-width: 90%;
     }
     .categories {
       display: flex;
@@ -73,19 +95,35 @@
       text-decoration: none;
       font-weight: bold;
     }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        padding: 20px 10px;
+      }
+      .brand-name {
+        font-size: 2.2em;
+      }
+      .logo {
+        height: 90px;
+        width: 90px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <a href="/">
-      <img src="images/logo.jpg" alt="Brands Value India Logo" />
+    <a href="/" class="logo-container" aria-label="Brands Value Home">
+      <img src="images/logo.jpg" alt="Brands Value India Logo" class="logo" />
+      <span class="brand-name">Brands Value!</span>
     </a>
-    <h1>Brands Value!</h1>
-    <div class="tagline">
-      Your trusted source for Electrical, Plumbing & Hardware products
-    </div>
   </header>
+
+  <div class="tagline">
+    Your trusted source for Electrical, Plumbing & Hardware products
+  </div>
 
   <div class="categories">
     <div class="category-box">
@@ -107,7 +145,6 @@
 
 </body>
 </html>
-
 
 
 
